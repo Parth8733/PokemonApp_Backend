@@ -1,8 +1,13 @@
 const Pokemon = require('../models/Pokemon');
 
-exports.show = (req, res) => {
-    res.send("Welecome to Pokemon Center!");
-} 
+exports.show = async (req, res)=> {
+    try{
+       const pokemons = await Pokemon.find();
+       res.status(200).json(pokemons);
+    }catch(err){
+        console.log(err);
+    }
+}
 
 exports.create = async (req, res)=> {
     const newPokemon = new Pokemon({
