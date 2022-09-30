@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// pokemon schema design
 const PokemonSchema = new mongoose.Schema(
   {
     name: {

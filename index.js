@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+//imported pokemon routes
 const pokemonRoute = require("./routes/pokemon");
 
 dotenv.config();
+//connection to mongo database
 mongoose.connect(process.env.DATABASE_URL, { useNewURLParser: true }, () => {
   console.log("Database Connection established");
 });
