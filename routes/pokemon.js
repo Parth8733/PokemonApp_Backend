@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const {show} = require('../controllers/pokemon');
+const {show, create} = require('../controllers/pokemon');
 
 router.get("/", show);
+router.post("/create",create);
 
 module.exports = router;
