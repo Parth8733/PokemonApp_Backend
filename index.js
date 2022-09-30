@@ -14,6 +14,6 @@ app.get("/",(req, res) => {
 })
 app.use('/Pokemon', pokemonRoute);
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Always watching... on port ${port}`));
 
